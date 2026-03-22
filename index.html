@@ -10,10 +10,8 @@
 <style>
 body {font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6;}
 
-/* TOP BAR */
 .topbar {background:#2c6fb7; color:#fff; padding:8px 20px; font-size:14px;}
 
-/* HEADER */
 header {background:#fff; padding:15px 20px; display:flex; justify-content:space-between; align-items:center;}
 .header-left {display:flex; align-items:center; gap:15px;}
 .header-logo {height:50px;}
@@ -22,7 +20,7 @@ nav a {color:#1e5f8a; margin:0 12px; text-decoration:none; font-weight:bold;}
 .register-btn {background:#7ea6d8; padding:8px 16px; border-radius:8px; color:white; text-decoration:none;}
 
 /* SLIDER */
-.slider {position:relative; height:400px; overflow:hidden;}
+.slider {position:relative; height:420px; overflow:hidden;}
 .slide {position:absolute; width:100%; height:100%; opacity:0; transition:opacity 1s;}
 .slide img {width:100%; height:100%; object-fit:cover;}
 .active {opacity:1;}
@@ -37,7 +35,14 @@ color:white;
 .slide-text h1 {font-size:36px; margin-bottom:10px;}
 .slide-text p {font-size:18px;}
 
-/* GENERAL */
+/* INFO SECTION */
+.info-section {display:flex; gap:30px; padding:40px; background:#f5f5f5;}
+.info-left {flex:2;}
+.info-right {flex:1; background:#dbe6f5; padding:20px; border-radius:10px;}
+.info-right h3 {margin-top:0;}
+.info-right ul {list-style:none; padding:0;}
+.info-right li {margin-bottom:15px;}
+
 section {padding:40px;}
 .container {max-width:1000px; margin:auto;}
 .footer {background:#0a3d62; color:#fff; text-align:center; padding:20px;}
@@ -51,12 +56,10 @@ section {padding:40px;}
 
 <body>
 
-<!-- TOP BAR -->
 <div class="topbar">
 Yogyakarta, Indonesia • 2026
 </div>
 
-<!-- HEADER -->
 <header>
 <div class="header-left">
 <img src="images/ICFAEMH.png" class="header-logo">
@@ -74,31 +77,48 @@ Yogyakarta, Indonesia • 2026
 </nav>
 </header>
 
-<!-- SLIDER -->
+<!-- SLIDER (5 IMAGES) -->
 <div class="slider">
 
-<div class="slide active">
-<img src="images/slider1.png">
+<div class="slide active"><img src="images/slider1.png"></div>
+<div class="slide"><img src="images/slider2.png"></div>
+<div class="slide"><img src="images/slider3.png"></div>
+<div class="slide"><img src="images/slider4.png"></div>
+<div class="slide"><img src="images/slider5.png"></div>
+
 <div class="slide-text">
 <h1>ICFAEMH 2026</h1>
 <p>International Conference on Emerging Trends</p>
 </div>
+
 </div>
 
-<div class="slide">
-<img src="images/slider2.png">
-<div class="slide-text">
-<h1>Food & Agroindustry Innovation</h1>
-<p>Advancing Sustainable Future</p>
-</div>
+<!-- INFO SECTION -->
+<div class="info-section">
+
+<div class="info-left">
+<p>
+ICFAEMH 2026 provides an ideal academic platform for researchers to present the latest research findings and emerging technologies in food, agroindustry, environmental, molecular, and health sciences.
+</p>
+
+<p>
+The conference includes various symposium topics covering interdisciplinary fields and aims to foster collaboration among global researchers.
+</p>
+
+<p>
+Accepted papers will be submitted for possible inclusion in indexed proceedings (Scopus / DOAJ).
+</p>
 </div>
 
-<div class="slide">
-<img src="images/slider3.png">
-<div class="slide-text">
-<h1>Join Global Researchers</h1>
-<p>Lecturers • Researchers • Students</p>
-</div>
+<div class="info-right">
+<h3>IMPORTANT DATES</h3>
+<ul>
+<li><strong>Final submission deadline</strong><br>23 June</li>
+<li><strong>Notification of acceptance</strong><br>18 July</li>
+<li><strong>Registration deadline</strong><br>25 July</li>
+<li><strong>Final paper submission</strong><br>25 July</li>
+<li><strong>Conference date</strong><br>30–31 July</li>
+</ul>
 </div>
 
 </div>
@@ -123,56 +143,8 @@ Yogyakarta, Indonesia • 2026
 <div class="container">
 <h2>About the Conference</h2>
 <p>
-ICFAEMH 2026 aims to bring together lecturers, researchers, and students to share the latest research and innovations.
+ICFAEMH 2026 aims to bring together lecturers, researchers, and students to share innovations.
 </p>
-</div>
-</section>
-
-<section id="topics" style="background:#f4f4f4;">
-<div class="container">
-<h2>Conference Topics</h2>
-<ul>
-<li>Food Science & Technology</li>
-<li>Agroindustry</li>
-<li>Environmental Science</li>
-<li>Molecular Biology</li>
-<li>Health Sciences</li>
-</ul>
-</div>
-</section>
-
-<section id="dates">
-<div class="container">
-<h2>Important Dates</h2>
-<ul>
-<li>Abstract Submission Deadline: TBA</li>
-<li>Notification: TBA</li>
-<li>Conference: 2026</li>
-</ul>
-</div>
-</section>
-
-<section id="submission" style="background:#f4f4f4;">
-<div class="container">
-<h2>Submission</h2>
-<a class="button" href="#">Submit via EasyChair</a>
-</div>
-</section>
-
-<section id="committee">
-<div class="container">
-<h2>Committee</h2>
-<ul>
-<li>Chair: TBA</li>
-<li>Scientific Committee: TBA</li>
-</ul>
-</div>
-</section>
-
-<section id="contact" style="background:#f4f4f4;">
-<div class="container">
-<h2>Contact</h2>
-<p>Email: icfaemh@unram.ac.id</p>
 </div>
 </section>
 
@@ -180,7 +152,6 @@ ICFAEMH 2026 aims to bring together lecturers, researchers, and students to shar
 <p>© 2026 ICFAEMH</p>
 </div>
 
-<!-- SLIDER SCRIPT -->
 <script>
 let slides = document.querySelectorAll('.slide');
 let index = 0;
@@ -191,7 +162,7 @@ slides[index].classList.add('active');
 index = (index + 1) % slides.length;
 }
 
-setInterval(showSlide, 4000);
+setInterval(showSlide, 3500);
 </script>
 
 </body>
