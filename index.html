@@ -5,19 +5,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>ICFAEMH 2026</title>
 
-<!-- Favicon -->
 <link rel="icon" type="image/png" href="images/ICFAEMH.png">
 
 <style>
 body {font-family: Arial, sans-serif; margin:0; padding:0; line-height:1.6;}
-header {background:#0a3d62; color:#fff; padding:20px; text-align:center;}
-.header-logo {max-width:120px; margin-bottom:10px;}
-nav {background:#1e5f8a; padding:10px; text-align:center;}
-nav a {color:white; margin:0 15px; text-decoration:none; font-weight:bold;}
+
+/* TOP BAR */
+.topbar {background:#2c6fb7; color:#fff; padding:8px 20px; font-size:14px;}
+
+/* HEADER */
+header {background:#fff; padding:15px 20px; display:flex; justify-content:space-between; align-items:center;}
+.header-left {display:flex; align-items:center; gap:15px;}
+.header-logo {height:50px;}
+
+nav a {color:#1e5f8a; margin:0 12px; text-decoration:none; font-weight:bold;}
+.register-btn {background:#7ea6d8; padding:8px 16px; border-radius:8px; color:white; text-decoration:none;}
+
+/* SLIDER */
+.slider {position:relative; height:400px; overflow:hidden;}
+.slide {position:absolute; width:100%; height:100%; opacity:0; transition:opacity 1s;}
+.slide img {width:100%; height:100%; object-fit:cover;}
+.active {opacity:1;}
+
+.slide-text {
+position:absolute;
+top:50%;
+left:50px;
+transform:translateY(-50%);
+color:white;
+}
+.slide-text h1 {font-size:36px; margin-bottom:10px;}
+.slide-text p {font-size:18px;}
+
+/* GENERAL */
 section {padding:40px;}
 .container {max-width:1000px; margin:auto;}
 .footer {background:#0a3d62; color:#fff; text-align:center; padding:20px;}
 .button {background:#0a3d62; color:white; padding:10px 20px; text-decoration:none; border-radius:5px;}
+
 .logo-row {display:flex; justify-content:center; align-items:center; gap:30px; flex-wrap:wrap; margin-top:20px;}
 .logo-row img {max-height:60px; background:white; padding:5px; border-radius:5px;}
 .org-section {text-align:center; margin-top:20px;}
@@ -26,41 +51,79 @@ section {padding:40px;}
 
 <body>
 
+<!-- TOP BAR -->
+<div class="topbar">
+Yogyakarta, Indonesia • 2026
+</div>
+
+<!-- HEADER -->
 <header>
-<img src="images/ICFAEMH.png" alt="ICFAEMH Logo" class="header-logo">
-<h1>ICFAEMH 2026</h1>
-<p>1st International Conference on Emerging Trends in Food, Agroindustry, Environmental, Molecular and Health Sciences</p>
-<p>Universitas Mataram | Universiti Sains Malaysia | Universiti Putra Malaysia</p>
-
-<div class="org-section">
-<p><strong>Organized by</strong></p>
-<div class="logo-row">
-<img src="images/UNRAM.png" alt="UNRAM">
+<div class="header-left">
+<img src="images/ICFAEMH.png" class="header-logo">
+<strong>ICFAEMH 2026</strong>
 </div>
-
-<p><strong>Co-Organized by</strong></p>
-<div class="logo-row">
-<img src="images/USM.png" alt="USM">
-<img src="images/UPM.png" alt="UPM">
-</div>
-</div>
-
-</header>
 
 <nav>
 <a href="#about">About</a>
 <a href="#topics">Topics</a>
-<a href="#dates">Important Dates</a>
+<a href="#dates">Dates</a>
 <a href="#submission">Submission</a>
 <a href="#committee">Committee</a>
 <a href="#contact">Contact</a>
+<a href="#" class="register-btn">Register</a>
 </nav>
+</header>
+
+<!-- SLIDER -->
+<div class="slider">
+
+<div class="slide active">
+<img src="images/slider1.png">
+<div class="slide-text">
+<h1>ICFAEMH 2026</h1>
+<p>International Conference on Emerging Trends</p>
+</div>
+</div>
+
+<div class="slide">
+<img src="images/slider2.png">
+<div class="slide-text">
+<h1>Food & Agroindustry Innovation</h1>
+<p>Advancing Sustainable Future</p>
+</div>
+</div>
+
+<div class="slide">
+<img src="images/slider3.png">
+<div class="slide-text">
+<h1>Join Global Researchers</h1>
+<p>Lecturers • Researchers • Students</p>
+</div>
+</div>
+
+</div>
+
+<!-- ORGANIZER -->
+<section>
+<div class="container org-section">
+<p><strong>Organized by</strong></p>
+<div class="logo-row">
+<img src="images/UNRAM.png">
+</div>
+
+<p><strong>Co-Organized by</strong></p>
+<div class="logo-row">
+<img src="images/USM.png">
+<img src="images/UPM.png">
+</div>
+</div>
+</section>
 
 <section id="about">
 <div class="container">
 <h2>About the Conference</h2>
 <p>
-ICFAEMH 2026 aims to bring together lecturers, researchers, and students to share the latest research and innovations in food, agroindustry, environmental, molecular, and health sciences.
+ICFAEMH 2026 aims to bring together lecturers, researchers, and students to share the latest research and innovations.
 </p>
 </div>
 </section>
@@ -70,9 +133,9 @@ ICFAEMH 2026 aims to bring together lecturers, researchers, and students to shar
 <h2>Conference Topics</h2>
 <ul>
 <li>Food Science & Technology</li>
-<li>Agroindustry & Agricultural Engineering</li>
+<li>Agroindustry</li>
 <li>Environmental Science</li>
-<li>Molecular Biology & Biotechnology</li>
+<li>Molecular Biology</li>
 <li>Health Sciences</li>
 </ul>
 </div>
@@ -83,9 +146,8 @@ ICFAEMH 2026 aims to bring together lecturers, researchers, and students to shar
 <h2>Important Dates</h2>
 <ul>
 <li>Abstract Submission Deadline: TBA</li>
-<li>Notification of Acceptance: TBA</li>
-<li>Full Paper Submission: TBA</li>
-<li>Conference Date: 2026</li>
+<li>Notification: TBA</li>
+<li>Conference: 2026</li>
 </ul>
 </div>
 </section>
@@ -93,19 +155,15 @@ ICFAEMH 2026 aims to bring together lecturers, researchers, and students to shar
 <section id="submission" style="background:#f4f4f4;">
 <div class="container">
 <h2>Submission</h2>
-<p>
-All participants are invited to submit their abstracts and full papers through our submission system.
-</p>
 <a class="button" href="#">Submit via EasyChair</a>
 </div>
 </section>
 
 <section id="committee">
 <div class="container">
-<h2>Organizing Committee</h2>
+<h2>Committee</h2>
 <ul>
 <li>Chair: TBA</li>
-<li>Co-Chair: TBA</li>
 <li>Scientific Committee: TBA</li>
 </ul>
 </div>
@@ -115,13 +173,26 @@ All participants are invited to submit their abstracts and full papers through o
 <div class="container">
 <h2>Contact</h2>
 <p>Email: icfaemh@unram.ac.id</p>
-<p>Website: https://icfaemh.github.io/home</p>
 </div>
 </section>
 
 <div class="footer">
-<p>© 2026 ICFAEMH Conference</p>
+<p>© 2026 ICFAEMH</p>
 </div>
+
+<!-- SLIDER SCRIPT -->
+<script>
+let slides = document.querySelectorAll('.slide');
+let index = 0;
+
+function showSlide() {
+slides.forEach(s => s.classList.remove('active'));
+slides[index].classList.add('active');
+index = (index + 1) % slides.length;
+}
+
+setInterval(showSlide, 4000);
+</script>
 
 </body>
 </html>
